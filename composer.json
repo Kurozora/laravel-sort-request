@@ -1,0 +1,46 @@
+{
+    "name": "musa11971/laravel-sort-request",
+    "description": "TBA",
+    "keywords": [
+        "laravel-sort-request"
+    ],
+    "homepage": "https://github.com/musa11971/laravel-sort-request",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "musa11971",
+            "email": "mussesemou99@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.3",
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "musa11971\\SortRequest\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "musa11971\\SortRequest\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "musa11971\\SortRequest\\SortRequestServiceProvider"
+            ]
+        }
+    }
+}
