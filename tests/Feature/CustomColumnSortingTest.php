@@ -4,7 +4,7 @@ namespace musa11971\SortRequest\Tests\Feature;
 
 use musa11971\SortRequest\Tests\TestCase;
 
-class AdvancedSortingTest extends TestCase
+class CustomColumnSortingTest extends TestCase
 {
     /** @test */
     function it_can_sort_a_custom_column()
@@ -37,7 +37,7 @@ class AdvancedSortingTest extends TestCase
     }
 
     /** @test */
-    function it_cannot_sort_a_custom_column_twice()
+    function it_cannot_sort_the_same_custom_column_more_than_once()
     {
         $response = $this->json('GET', '/items/advanced', [
             'sort' => 'weight(light),weight(heavy)'
