@@ -1,18 +1,29 @@
-# Sort Eloquent models through your Laravel requests.
+<p align="center"><img src=".github/logo.png" width="400"></p>
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/:package_name.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/:package_name/run-tests?label=tests)](https://github.com/spatie/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/:package_name.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/:package_name)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/:package_name.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
+<p align="center">
+<a href="https://packagist.org/packages/musa11971/laravel-sort-request"><img src="https://img.shields.io/packagist/v/musa11971/laravel-sort-request.svg?style=flat-square" alt="Latest version on packagist"></a>
+<a href="https://github.com/musa11971/laravel-sort-request/actions?query=workflow%3Arun-tests+branch%3Amaster"><img src="https://img.shields.io/github/workflow/status/musa11971/laravel-sort-request/run-tests?label=tests" alt="GitHub Tests Action Status"></a>
+<a href="https://scrutinizer-ci.com/g/musa11971/laravel-sort-request"><img src="https://img.shields.io/scrutinizer/g/musa11971/laravel-sort-request.svg?style=flat-square" alt="Quality score"></a>
+<a href="https://packagist.org/packages/musa11971/laravel-sort-request"><img src="https://img.shields.io/packagist/dt/musa11971/laravel-sort-request.svg?style=flat-square" alt="Total downloads"></a>
+</p>
+
+<p align="center">
+  <sup><em>because you've got better things to do</em></sup>
+</p>
+
+# Sorting logic for your requests, but simplified
 
 This Laravel package makes it easier to implement sorting logic into your app.  
-Consider the following:
+Consider the following examples:
 ```bash
 # Get the cheapest items
 https://example.test/items?sort=price(asc)
 
 # Get the items sorted by name and size
 https://example.test/items?sort=name(asc),size(desc)
+
+# Get the most popular TV Shows (custom sorting behavior)
+https://example.test/tv-shows?sort=popularity(most-popular)
 ```
 
 ## Installation
@@ -114,8 +125,11 @@ If you discover any security related issues, please email mussesemou99@gmail.com
 
 ## Credits
 
-- [musa11971](https://github.com/musa11971)
-- [All Contributors](../../contributors)
+Credits go to [musa11971](https://github.com/musa11971) for creating and maintaining the package.  
+
+Special thanks  
+- .. to [Spatie](https://github.com/spatie) for their [template](https://github.com/spatie/skeleton-php).
+- .. to [all contributors](../../contributors) for contributing to the project.
 
 ## Support me
 
