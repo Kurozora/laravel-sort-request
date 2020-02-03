@@ -3,6 +3,8 @@
 namespace musa11971\SortRequest\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
+use musa11971\SortRequest\SortableColumn;
+use musa11971\SortRequest\SortableColumnCollection;
 
 class SortParameter implements Rule
 {
@@ -11,8 +13,8 @@ class SortParameter implements Rule
     /** @var string $failure */
     private $failure = 'The :attribute is invalid.';
 
-    /** @var array $sortableColumns */
-    private $sortableColumns;
+    /** @var SortableColumnCollection $sortableColumns */
+    public $sortableColumns;
 
     /** @var array $sortingRules */
     public $sortingRules;
@@ -22,7 +24,7 @@ class SortParameter implements Rule
      */
     public function __construct($sortableColumns)
     {
-        $this->sortableColumns = $sortableColumns;
+        $this->sortableColumns = $this->transformSortableColumns($sortableColumns);
     }
 
     /**
@@ -50,11 +52,11 @@ class SortParameter implements Rule
             $direction = $rule['direction'];
 
             // Validate that the column can be sorted on
-            if(!in_array($column, $this->sortableColumns))
+            if(!$this->sortableColumns->isValidColumn($column))
                 return $this->fail("'{$column}' cannot be sorted on.");
 
             // Validate that the direction is valid
-            if(!in_array($direction, ['asc', 'desc']))
+            if(!$this->sortableColumns->isValidDirectionForColumn($column, $direction))
                 return $this->fail("'{$direction}' is an invalid sorting direction for '{$column}'");
 
             // Validate whether the column is not present more than once
@@ -113,5 +115,32 @@ class SortParameter implements Rule
         }
 
         return null;
+    }
+
+    /**
+     * Transforms the format used in form requests to a SortableColumnCollection.
+     *
+     * @param array $columns
+     * @return SortableColumnCollection
+     */
+    private function transformSortableColumns($columns)
+    {
+        $collection = new SortableColumnCollection();
+
+        foreach($columns as $left => $right) {
+            // ['columnName' => [...]]; notation
+            if (is_string($left)) {
+                // @TODO
+                // check if $right['directions'] exists or throw exception
+
+                $collection->add(new SortableColumn($left, $right['directions'], true));
+            }
+            // ['columnName']; notation
+            else {
+                $collection->add(new SortableColumn($right, ['asc', 'desc'], false));
+            }
+        }
+
+        return $collection;
     }
 }

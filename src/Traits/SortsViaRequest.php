@@ -33,8 +33,19 @@ trait SortsViaRequest
      *
      * @return array
      */
-    function validatedSortingRules() {
+    function validatedSortingRules()
+    {
         return $this->sortParameterRule->sortingRules;
+    }
+
+    /**
+     * Returns the transformed sortable columns.
+     *
+     * @return \musa11971\SortRequest\SortableColumnCollection
+     */
+    function transformedSortableColumns()
+    {
+        return $this->sortParameterRule->sortableColumns;
     }
 
     /**
