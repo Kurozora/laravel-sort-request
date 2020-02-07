@@ -31,7 +31,7 @@ class SortableColumnCollection extends Collection
         $column = $this->find($column);
 
         if($column) {
-            return in_array($direction, $column->directions);
+            return in_array($direction, $column->sorter->getDirections());
         }
 
         return false;

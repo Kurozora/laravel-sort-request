@@ -2,33 +2,20 @@
 
 namespace musa11971\SortRequest;
 
-use Illuminate\Support\Str;
+use musa11971\SortRequest\Support\Foundation\Contracts\Sorter;
 
 class SortableColumn
 {
     public $name;
-    public $directions;
-    public $isCustom;
+    public $sorter;
 
     /**
      * @param string $name
-     * @param array $directions
-     * @param bool $isCustom
+     * @param Sorter $sorter
      */
-    public function __construct($name, $directions, $isCustom)
+    public function __construct($name, $sorter)
     {
         $this->name = $name;
-        $this->directions = $directions;
-        $this->isCustom = $isCustom;
-    }
-
-    /**
-     * Returns the method name used for sorting, if the column is custom.
-     *
-     * @return string
-     */
-    function getSortingMethodName()
-    {
-        return Str::camel('sort ' . $this->name);
+        $this->sorter = $sorter;
     }
 }

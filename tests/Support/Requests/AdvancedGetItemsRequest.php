@@ -2,7 +2,7 @@
 
 namespace musa11971\SortRequest\Tests\Support\Requests;
 
-use Illuminate\Database\Eloquent\Builder;
+use musa11971\SortRequest\Tests\Support\Sorters\ItemWeightSorter;
 use musa11971\SortRequest\Traits\SortsViaRequest;
 
 class AdvancedGetItemsRequest extends FormRequest
@@ -30,23 +30,7 @@ class AdvancedGetItemsRequest extends FormRequest
     {
         return [
             'id',
-            'weight' => [
-                'directions' => ['heavy', 'light']
-            ]
+            'weight' => ItemWeightSorter::class
         ];
-    }
-
-    /**
-     * Sort the custom weight column.
-     *
-     * @param string $direction
-     * @param Builder $builder
-     */
-    function sortWeight($direction, &$builder)
-    {
-        if($direction == 'heavy')
-            $builder->orderBy('stackSize', 'desc');
-        else
-            $builder->orderBy('stackSize', 'asc');
     }
 }

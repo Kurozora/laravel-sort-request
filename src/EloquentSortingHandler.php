@@ -46,13 +46,8 @@ class EloquentSortingHandler {
             // Find the relevant sortable column for this rule
             $sortableColumn = $this->sortableColumns->find($rule['column']);
 
-            // If the sortable column is not custom, do a basic orderBy
-            if(!$sortableColumn->isCustom) {
-                $this->builder->orderBy($rule['column'], $rule['direction']);
-            }
-            else {
-                $this->handleCustomSort($sortableColumn, $rule, $this->builder);
-            }
+            // Handle the sorting actions for the column
+            $this->handleSort($sortableColumn, $rule, $this->builder);
         }
 
         // Pass back the builder so that it can be chained
@@ -60,24 +55,16 @@ class EloquentSortingHandler {
     }
 
     /**
-     * Handle the sorting of a custom sortable column.
+     * Handle the sorting of a column.
      *
      * @param SortableColumn $sortableColumn
      * @param array $rule
      * @param Builder $builder
-     * @throws EloquentSortingException
      */
-    private function handleCustomSort($sortableColumn, $rule, &$builder)
+    private function handleSort($sortableColumn, $rule, &$builder)
     {
-        // Get the method name that needs to be called for the custom sort
-        $methodName = $sortableColumn->getSortingMethodName();
-
-        // Check whether the method exists in the request
-        if(!method_exists($this->request, $methodName))
-            throw new EloquentSortingException("Could not sort custom column '{$sortableColumn->name}', because method: '{$methodName}' is not implemented.");
-
-        // Call the custom sorting method in the request
-        $this->request->{$methodName}($rule['direction'], $builder);
+        // Call the sorter's apply method
+        $builder = $sortableColumn->sorter->apply(request(), $builder, $rule['direction']);
     }
 
     /**

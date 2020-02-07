@@ -3,8 +3,10 @@
 namespace musa11971\SortRequest\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
+use musa11971\SortRequest\Sorters\DefaultSorter;
 use musa11971\SortRequest\SortableColumn;
 use musa11971\SortRequest\SortableColumnCollection;
+use musa11971\SortRequest\Support\Foundation\Contracts\Sorter;
 
 class SortParameter implements Rule
 {
@@ -128,16 +130,31 @@ class SortParameter implements Rule
         $collection = new SortableColumnCollection();
 
         foreach($columns as $left => $right) {
-            // ['columnName' => [...]]; notation
+            // ['columnName' => Sorter::class]; notation
             if (is_string($left)) {
-                // @TODO
-                // check if $right['directions'] exists or throw exception
+                // Redefine variables for clarity
+                $columnName = $left;
+                $sortClass = $right;
 
-                $collection->add(new SortableColumn($left, $right['directions'], true));
+                // Create the sorter
+                /** @var Sorter $sorter */
+                $sorter = new $sortClass;
+                $sorter->column = $columnName;
+
+                // Add the SortableColumn
+                $collection->add(new SortableColumn($columnName, $sorter));
             }
             // ['columnName']; notation
             else {
-                $collection->add(new SortableColumn($right, ['asc', 'desc'], false));
+                // Redefine variables for clarity
+                $columnName = $right;
+
+                // Create the default sorter
+                $sorter = new DefaultSorter();
+                $sorter->column = $columnName;
+
+                // Add the SortableColumn
+                $collection->add(new SortableColumn($columnName, $sorter));
             }
         }
 
