@@ -47,7 +47,7 @@ public function apply(Request $request, Builder $builder, $direction): Builder
 }
 ```
 
-### 3. Setting up the sorter for use
+## 3. Setting up the sorter for use
 Your sorter should be ready for use. Your [Laravel form request](https://laravel.com/docs/6.x/validation#form-request-validation) should look something like this:
 ```php
 class GetUsersRequest extends FormRequest
