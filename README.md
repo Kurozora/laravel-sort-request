@@ -35,7 +35,7 @@ composer require musa11971/laravel-sort-request
 ```
 
 ## Usage
-
+### Basic sorting
 Add the `SortsViaRequest` trait to your [Laravel form request](https://laravel.com/docs/6.x/validation#form-request-validation).
 
 ```php
@@ -105,15 +105,23 @@ https://example.test/items?sort=price(asc)
 https://example.test/items?sort=price(asc),name(desc),experience(asc)
 ```
 
+### Custom sorting
+This package also allow you to have custom sorting behavior, like the following examples:
+```bash
+# Get the worst ranking users
+https://example.test/user?sort=ranking(worst)
+
+# Get the most delicious pastries, and sort them by cheapest
+https://example.test/pastries?sort=taste(most-delicious),price(cheapest)
+```
+
+Please refer the [custom sorting docs](docs/CUSTOM_SORTING.md) for a guide on how to use this.
+
 ### Testing
 
 ``` bash
 composer test
 ```
-
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
