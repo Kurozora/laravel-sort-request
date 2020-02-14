@@ -106,7 +106,7 @@ https://example.test/items?sort=price(asc),name(desc),experience(asc)
 ```
 
 ### Custom sorting
-This package also allow you to have custom sorting behavior, like the following examples:
+This package also allows you to have custom sorting behavior, like the following examples:
 ```bash
 # Get the worst ranking users
 https://example.test/user?sort=ranking(worst)
