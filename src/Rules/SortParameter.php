@@ -19,7 +19,7 @@ class SortParameter implements Rule
     public $sortableColumns;
 
     /** @var array $sortingRules */
-    public $sortingRules;
+    public $sortingRules = [];
 
     /**
      * @param array $sortableColumns

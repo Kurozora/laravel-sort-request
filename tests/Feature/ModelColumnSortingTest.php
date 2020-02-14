@@ -86,4 +86,12 @@ class ModelColumnSortingTest extends TestCase
 
         $response->assertJsonValidationErrors(['sort']);
     }
+
+    /** @test */
+    function it_allows_the_user_to_omit_the_sorting_parameter()
+    {
+        $response = $this->json('GET', '/items');
+
+        $response->assertSuccessful();
+    }
 }
