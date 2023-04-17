@@ -1,8 +1,8 @@
 <?php
 
-namespace musa11971\SortRequest\Tests\Feature;
+namespace Kurozora\SortRequest\Tests\Feature;
 
-use musa11971\SortRequest\Tests\TestCase;
+use Kurozora\SortRequest\Tests\TestCase;
 
 class CustomColumnSortingTest extends TestCase
 {

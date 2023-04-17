@@ -1,12 +1,12 @@
 <?php
 
-namespace musa11971\SortRequest\Tests\Support\Controllers;
+namespace Kurozora\SortRequest\Tests\Support\Controllers;
 
 use Illuminate\Routing\Controller;
-use musa11971\SortRequest\Tests\Support\Models\Item;
-use musa11971\SortRequest\Tests\Support\Requests\AdvancedGetItemsRequest;
-use musa11971\SortRequest\Tests\Support\Requests\GetItemsRequest;
-use musa11971\SortRequest\Tests\Support\Resources\ItemResource;
+use Kurozora\SortRequest\Tests\Support\Models\Item;
+use Kurozora\SortRequest\Tests\Support\Requests\AdvancedGetItemsRequest;
+use Kurozora\SortRequest\Tests\Support\Requests\GetItemsRequest;
+use Kurozora\SortRequest\Tests\Support\Resources\ItemResource;
 
 class ItemController extends Controller
 {

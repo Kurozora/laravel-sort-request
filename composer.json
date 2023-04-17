@@ -1,15 +1,27 @@
 {
-    "name": "musa11971/laravel-sort-request",
+    "name": "kurozora/laravel-sort-request",
     "description": "TBA",
     "keywords": [
         "laravel-sort-request"
     ],
-    "homepage": "https://github.com/musa11971/laravel-sort-request",
+    "homepage": "https://github.com/kurozora/laravel-sort-request",
     "license": "MIT",
     "authors": [
         {
+            "name": "Kiritokatklian",
+            "email": "fusible-band-0x@icloud.com",
+            "homepage": "https://kurozora.app",
+            "role": "Developer"
+        },
+        {
             "name": "musa11971",
-            "email": "mussesemou99@gmail.com"
+            "role": "Developer"
+        }
+    ],
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/paypalme/kiritokatklian"
         }
     ],
     "require": {
@@ -24,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "musa11971\\SortRequest\\": "src"
+            "Kurozora\\SortRequest\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "musa11971\\SortRequest\\Tests\\": "tests"
+            "Kurozora\\SortRequest\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -42,7 +54,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "musa11971\\SortRequest\\SortRequestServiceProvider"
+                "Kurozora\\SortRequest\\SortRequestServiceProvider"
             ]
         }
     }

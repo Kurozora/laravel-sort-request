@@ -1,10 +1,10 @@
 <?php
 
-namespace musa11971\SortRequest;
+namespace Kurozora\SortRequest;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\ServiceProvider;
-use musa11971\SortRequest\Console\SorterMakeCommand;
+use Kurozora\SortRequest\Console\SorterMakeCommand;
 
 class SortRequestServiceProvider extends ServiceProvider
 {

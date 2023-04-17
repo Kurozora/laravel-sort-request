@@ -1,5 +1,5 @@
-| **[Back to readme](https://github.com/musa11971/laravel-sort-request/)** |
-| ------------- |
+| **[Back to readme](https://github.com/kurozora/laravel-sort-request/)** |
+|------------------------------------------------------------------|
 
 # Custom sorting
 In this example, we'll create a sorter that sorts the users based on the amount of comments they have.  

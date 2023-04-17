@@ -1,17 +1,10 @@
-<p align="center"><img src=".github/logo.png" width="400"></p>
+<p align="center"><img src=".github/logo.png"></p>
 
 <p align="center">
-<a href="https://packagist.org/packages/musa11971/laravel-sort-request"><img src="https://img.shields.io/packagist/v/musa11971/laravel-sort-request.svg?style=flat-square" alt="Latest version on packagist"></a>
-<a href="https://github.com/musa11971/laravel-sort-request/actions?query=workflow%3Arun-tests+branch%3Amaster"><img src="https://img.shields.io/github/workflow/status/musa11971/laravel-sort-request/run-tests?label=tests" alt="GitHub Tests Action Status"></a>
-<a href="https://scrutinizer-ci.com/g/musa11971/laravel-sort-request"><img src="https://img.shields.io/scrutinizer/g/musa11971/laravel-sort-request.svg?style=flat-square" alt="Quality score"></a>
-<a href="https://packagist.org/packages/musa11971/laravel-sort-request"><img src="https://img.shields.io/packagist/dt/musa11971/laravel-sort-request.svg?style=flat-square" alt="Total downloads"></a>
+  <sup><em>Sorting logic for your requests, simplified!</em></sup>
 </p>
 
-<p align="center">
-  <sup><em>because you've got better things to do</em></sup>
-</p>
-
-# Sorting logic for your requests, but simplified
+# Laravel Sort Request [![PHP 7.4+](https://img.shields.io/badge/PHP%207.4+-8892bf.svg?style=flat&logo=PHP&logoColor=white)](https://swift.org) [![Laravel](https://img.shields.io/badge/Laravel-white?style=flat&logo=Laravel)](https://laravel.com) [![Packagist](https://img.shields.io/packagist/v/kurozora/laravel-sort-request.svg?label=&style=flat&logo=Packagist&logoColor=white&color=C25934)](https://packagist.org/packages/kurozora/laravel-sort-request) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/Anarios/return-youtube-dislike/blob/main/LICENSE)
 
 This Laravel package makes it easier to implement sorting logic into your app.  
 Consider the following examples:
@@ -26,7 +19,7 @@ https://example.test/items?sort=name(asc),size(desc)
 https://example.test/tv-shows?sort=popularity(most-popular)
 ```
 
-## Installation
+# Installation
 
 You can download a release and manually include it in your project:
 
@@ -39,16 +32,16 @@ You can download a release and manually include it in your project:
 Alternatively you can install the package via composer:
 
 ```bash
-composer require musa11971/laravel-sort-request
+composer require kurozora/laravel-sort-request
 ```
 
-## Usage
-### Basic sorting
+# Usage
+## Basic sorting
 Add the `SortsViaRequest` trait to your [Laravel form request](https://laravel.com/docs/6.x/validation#form-request-validation).
 
 ```php
-use musa11971\SortRequest\Tests\Support\Requests\FormRequest;
-use musa11971\SortRequest\Traits\SortsViaRequest;
+use Kurozora\SortRequest\Tests\Support\Requests\FormRequest;
+use Kurozora\SortRequest\Traits\SortsViaRequest;
 
 class GetItemsRequest extends FormRequest
 {
@@ -92,8 +85,8 @@ Next, go to your controller and add the `sortViaRequest` method as follows:
 
 ```php
 use Illuminate\Routing\Controller;
-use musa11971\SortRequest\Tests\Support\Models\Item;
-use musa11971\SortRequest\Tests\Support\Requests\GetItemsRequest;
+use Kurozora\SortRequest\Tests\Support\Models\Item;
+use Kurozora\SortRequest\Tests\Support\Requests\GetItemsRequest;
 
 class ItemController extends Controller
 {
@@ -121,8 +114,8 @@ https://example.test/items?sort=price(asc)
 https://example.test/items?sort=price(asc),name(desc),experience(asc)
 ```
 
-### Custom sorting
-This package also allows you to have custom sorting behavior, like the following examples:
+## Custom sorting
+This package also allows you to have custom sorting behavior:
 ```bash
 # Get the worst ranking users
 https://example.test/user?sort=ranking(worst)
@@ -133,32 +126,32 @@ https://example.test/pastries?sort=taste(most-delicious),price(cheapest)
 
 Please refer the [custom sorting docs](docs/CUSTOM_SORTING.md) for a guide on how to use this.
 
-### Testing
+## Testing
 
 ``` bash
 composer test
 ```
 
-## Contributing
+# Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please refer to the **[Contributing guide](CONTRIBUTING.md)** to learn how you can help.
 
-### Security
+# Credits
 
-If you discover any security related issues, please email mussesemou99@gmail.com instead of using the issue tracker.
-
-## Credits
-
-Credits go to [musa11971](https://github.com/musa11971) for creating and maintaining the package.  
+Credits go to [kurozora](https://github.com/kurozora) for creating and maintaining the package.  
 
 Special thanks  
 - .. to [Spatie](https://github.com/spatie) for their [template](https://github.com/spatie/skeleton-php).
 - .. to [all contributors](../../contributors) for contributing to the project.
 
-## Support me
+# Security
 
-I am a full-time software engineering student and work on this package in my free time. If you find the package useful, please consider making a [donation](https://www.paypal.me/musa11971)! Every little bit helps. 💜
+If you happen to find a security vulnerability, we would appreciate you letting us know at kurozoraapp@gmail.com and allowing us to respond before disclosing the issue publicly.
 
-## License
+# Getting in Touch
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+If you have any questions or just want to say hi, join the Kurozora [Discord](https://discord.gg/f3QFzGqsah) and drop a message on the #development channel.
+
+# License
+
+Laravel Sort Request is an Open Source project covered by the [MIT](LICENSE).

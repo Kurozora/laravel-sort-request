@@ -1,9 +1,9 @@
 <?php
 
-namespace musa11971\SortRequest\Tests\Support\Requests;
+namespace Kurozora\SortRequest\Tests\Support\Requests;
 
-use musa11971\SortRequest\Tests\Support\Sorters\ItemWeightSorter;
-use musa11971\SortRequest\Traits\SortsViaRequest;
+use Kurozora\SortRequest\Tests\Support\Sorters\ItemWeightSorter;
+use Kurozora\SortRequest\Traits\SortsViaRequest;
 
 class AdvancedGetItemsRequest extends FormRequest
 {

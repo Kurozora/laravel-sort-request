@@ -1,6 +1,6 @@
 <?php
 
-namespace musa11971\SortRequest\Console;
+namespace Kurozora\SortRequest\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;

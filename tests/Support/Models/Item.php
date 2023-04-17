@@ -1,6 +1,6 @@
 <?php
 
-namespace musa11971\SortRequest\Tests\Support\Models;
+namespace Kurozora\SortRequest\Tests\Support\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Sushi\Sushi;

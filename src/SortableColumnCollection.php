@@ -1,6 +1,6 @@
 <?php
 
-namespace musa11971\SortRequest;
+namespace Kurozora\SortRequest;
 
 use Illuminate\Support\Collection;
 

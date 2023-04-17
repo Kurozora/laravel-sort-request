@@ -1,9 +1,9 @@
 <?php
 
-namespace musa11971\SortRequest\Tests\Feature;
+namespace Kurozora\SortRequest\Tests\Feature;
 
 use Illuminate\Support\Str;
-use musa11971\SortRequest\Tests\TestCase;
+use Kurozora\SortRequest\Tests\TestCase;
 
 class ModelColumnSortingTest extends TestCase
 {

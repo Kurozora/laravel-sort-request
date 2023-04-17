@@ -1,11 +1,11 @@
 <?php
 
-namespace musa11971\SortRequest\Traits;
+namespace Kurozora\SortRequest\Traits;
 
 use Illuminate\Foundation\Http\FormRequest;
-use musa11971\SortRequest\Exceptions\BadTraitImplementation;
-use musa11971\SortRequest\Rules\SortParameter;
-use musa11971\SortRequest\SortableColumnCollection;
+use Kurozora\SortRequest\Exceptions\BadTraitImplementation;
+use Kurozora\SortRequest\Rules\SortParameter;
+use Kurozora\SortRequest\SortableColumnCollection;
 
 trait SortsViaRequest
 {

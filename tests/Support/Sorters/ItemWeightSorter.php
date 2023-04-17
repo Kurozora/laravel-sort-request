@@ -1,10 +1,10 @@
 <?php
 
-namespace musa11971\SortRequest\Tests\Support\Sorters;
+namespace Kurozora\SortRequest\Tests\Support\Sorters;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
-use musa11971\SortRequest\Support\Foundation\Contracts\Sorter;
+use Kurozora\SortRequest\Support\Foundation\Contracts\Sorter;
 
 class ItemWeightSorter extends Sorter
 {

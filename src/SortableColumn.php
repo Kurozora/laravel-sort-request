@@ -1,8 +1,8 @@
 <?php
 
-namespace musa11971\SortRequest;
+namespace Kurozora\SortRequest;
 
-use musa11971\SortRequest\Support\Foundation\Contracts\Sorter;
+use Kurozora\SortRequest\Support\Foundation\Contracts\Sorter;
 
 class SortableColumn
 {

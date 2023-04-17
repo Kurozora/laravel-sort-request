@@ -1,8 +1,8 @@
 <?php
 
-namespace musa11971\SortRequest\Tests\Support\Requests;
+namespace Kurozora\SortRequest\Tests\Support\Requests;
 
-use musa11971\SortRequest\Traits\SortsViaRequest;
+use Kurozora\SortRequest\Traits\SortsViaRequest;
 
 class GetItemsRequest extends FormRequest
 {
