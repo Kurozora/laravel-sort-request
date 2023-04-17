@@ -1,6 +1,6 @@
 <?php
 
-namespace Kurozora\SortRequest\Exceptions;
+namespace kiritokatklian\SortRequest\Exceptions;
 
 use Exception;
 

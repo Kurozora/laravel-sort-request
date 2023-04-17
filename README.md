@@ -4,7 +4,7 @@
   <sup><em>Sorting logic for your requests, simplified!</em></sup>
 </p>
 
-# Laravel Sort Request [![PHP 7.4+](https://img.shields.io/badge/PHP%207.4+-8892bf.svg?style=flat&logo=PHP&logoColor=white)](https://swift.org) [![Laravel](https://img.shields.io/badge/Laravel-white?style=flat&logo=Laravel)](https://laravel.com) [![Packagist](https://img.shields.io/packagist/v/kurozora/laravel-sort-request.svg?label=&style=flat&logo=Packagist&logoColor=white&color=C25934)](https://packagist.org/packages/kurozora/laravel-sort-request) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/Anarios/return-youtube-dislike/blob/main/LICENSE)
+# Laravel Sort Request [![PHP 7.4+](https://img.shields.io/badge/PHP%207.4+-8892bf.svg?style=flat&logo=PHP&logoColor=white)](https://swift.org) [![Laravel](https://img.shields.io/badge/Laravel-white?style=flat&logo=Laravel)](https://laravel.com) [![Packagist](https://img.shields.io/packagist/v/kiritokatklian/laravel-sort-request.svg?label=&style=flat&logo=Packagist&logoColor=white&color=C25934)](https://packagist.org/packages/kiritokatklian/laravel-sort-request) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/Anarios/return-youtube-dislike/blob/main/LICENSE)
 
 This Laravel package makes it easier to implement sorting logic into your app.  
 Consider the following examples:
@@ -32,7 +32,7 @@ You can download a release and manually include it in your project:
 Alternatively you can install the package via composer:
 
 ```bash
-composer require kurozora/laravel-sort-request
+composer require kiritokatklian/laravel-sort-request
 ```
 
 # Usage
@@ -40,8 +40,8 @@ composer require kurozora/laravel-sort-request
 Add the `SortsViaRequest` trait to your [Laravel form request](https://laravel.com/docs/6.x/validation#form-request-validation).
 
 ```php
-use Kurozora\SortRequest\Tests\Support\Requests\FormRequest;
-use Kurozora\SortRequest\Traits\SortsViaRequest;
+use kiritokatklian\SortRequest\Tests\Support\Requests\FormRequest;
+use kiritokatklian\SortRequest\Traits\SortsViaRequest;
 
 class GetItemsRequest extends FormRequest
 {
@@ -85,8 +85,8 @@ Next, go to your controller and add the `sortViaRequest` method as follows:
 
 ```php
 use Illuminate\Routing\Controller;
-use Kurozora\SortRequest\Tests\Support\Models\Item;
-use Kurozora\SortRequest\Tests\Support\Requests\GetItemsRequest;
+use kiritokatklian\SortRequest\Tests\Support\Models\Item;
+use kiritokatklian\SortRequest\Tests\Support\Requests\GetItemsRequest;
 
 class ItemController extends Controller
 {

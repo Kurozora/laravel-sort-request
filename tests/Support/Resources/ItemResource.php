@@ -1,9 +1,9 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests\Support\Resources;
+namespace kiritokatklian\SortRequest\Tests\Support\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Kurozora\SortRequest\Tests\Support\Models\Item;
+use kiritokatklian\SortRequest\Tests\Support\Models\Item;
 
 class ItemResource extends Resource
 {

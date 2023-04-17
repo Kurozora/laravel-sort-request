@@ -4,7 +4,7 @@ namespace DummyNamespace;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
-use Kurozora\SortRequest\Support\Foundation\Contracts\Sorter;
+use kiritokatklian\SortRequest\Support\Foundation\Contracts\Sorter;
 
 class DummyClass extends Sorter
 {

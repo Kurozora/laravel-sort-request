@@ -1,12 +1,12 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests\Support\Controllers;
+namespace kiritokatklian\SortRequest\Tests\Support\Controllers;
 
 use Illuminate\Routing\Controller;
-use Kurozora\SortRequest\Tests\Support\Models\Item;
-use Kurozora\SortRequest\Tests\Support\Requests\AdvancedGetItemsRequest;
-use Kurozora\SortRequest\Tests\Support\Requests\GetItemsRequest;
-use Kurozora\SortRequest\Tests\Support\Resources\ItemResource;
+use kiritokatklian\SortRequest\Tests\Support\Models\Item;
+use kiritokatklian\SortRequest\Tests\Support\Requests\AdvancedGetItemsRequest;
+use kiritokatklian\SortRequest\Tests\Support\Requests\GetItemsRequest;
+use kiritokatklian\SortRequest\Tests\Support\Resources\ItemResource;
 
 class ItemController extends Controller
 {

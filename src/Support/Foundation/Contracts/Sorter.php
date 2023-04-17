@@ -1,6 +1,6 @@
 <?php
 
-namespace Kurozora\SortRequest\Support\Foundation\Contracts;
+namespace kiritokatklian\SortRequest\Support\Foundation\Contracts;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;

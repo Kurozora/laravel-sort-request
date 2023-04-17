@@ -1,8 +1,8 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests\Support\Requests;
+namespace kiritokatklian\SortRequest\Tests\Support\Requests;
 
-use Kurozora\SortRequest\Traits\SortsViaRequest;
+use kiritokatklian\SortRequest\Traits\SortsViaRequest;
 
 class GetItemsRequest extends FormRequest
 {

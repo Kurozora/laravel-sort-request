@@ -1,12 +1,12 @@
 <?php
 
-namespace Kurozora\SortRequest\Rules;
+namespace kiritokatklian\SortRequest\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Kurozora\SortRequest\Sorters\DefaultSorter;
-use Kurozora\SortRequest\SortableColumn;
-use Kurozora\SortRequest\SortableColumnCollection;
-use Kurozora\SortRequest\Support\Foundation\Contracts\Sorter;
+use kiritokatklian\SortRequest\Sorters\DefaultSorter;
+use kiritokatklian\SortRequest\SortableColumn;
+use kiritokatklian\SortRequest\SortableColumnCollection;
+use kiritokatklian\SortRequest\Support\Foundation\Contracts\Sorter;
 
 class SortParameter implements Rule
 {

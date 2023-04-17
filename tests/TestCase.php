@@ -1,10 +1,10 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests;
+namespace kiritokatklian\SortRequest\Tests;
 
 use Illuminate\Routing\Router;
-use Kurozora\SortRequest\SortRequestServiceProvider;
-use Kurozora\SortRequest\Tests\Support\Resources\ItemResource;
+use kiritokatklian\SortRequest\SortRequestServiceProvider;
+use kiritokatklian\SortRequest\Tests\Support\Resources\ItemResource;
 use \Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\Snapshots\MatchesSnapshots;
 

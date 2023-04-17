@@ -1,6 +1,6 @@
 <?php
 
-namespace Kurozora\SortRequest;
+namespace kiritokatklian\SortRequest;
 
 use Illuminate\Support\Collection;
 

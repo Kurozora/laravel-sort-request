@@ -1,6 +1,6 @@
 {
-    "name": "kurozora/laravel-sort-request",
-    "description": "TBA",
+    "name": "kiritokatklian/laravel-sort-request",
+    "description": "Sorting logic for your requests, simplified.",
     "keywords": [
         "laravel-sort-request"
     ],
@@ -36,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kurozora\\SortRequest\\": "src"
+            "kiritokatklian\\SortRequest\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kurozora\\SortRequest\\Tests\\": "tests"
+            "kiritokatklian\\SortRequest\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,7 +54,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kurozora\\SortRequest\\SortRequestServiceProvider"
+                "kiritokatklian\\SortRequest\\SortRequestServiceProvider"
             ]
         }
     }

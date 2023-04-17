@@ -1,9 +1,9 @@
 <?php
 
-namespace Kurozora\SortRequest\Test\Support;
+namespace kiritokatklian\SortRequest\Test\Support;
 
 use Illuminate\Routing\Router;
-use Kurozora\SortRequest\Tests\Support\Controllers\ItemController;
+use kiritokatklian\SortRequest\Tests\Support\Controllers\ItemController;
 
 /** @var Router $router */
 

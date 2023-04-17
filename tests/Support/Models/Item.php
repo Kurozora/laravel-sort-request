@@ -1,6 +1,6 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests\Support\Models;
+namespace kiritokatklian\SortRequest\Tests\Support\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Sushi\Sushi;

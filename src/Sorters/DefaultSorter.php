@@ -1,10 +1,10 @@
 <?php
 
-namespace Kurozora\SortRequest\Sorters;
+namespace kiritokatklian\SortRequest\Sorters;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
-use Kurozora\SortRequest\Support\Foundation\Contracts\Sorter;
+use kiritokatklian\SortRequest\Support\Foundation\Contracts\Sorter;
 
 class DefaultSorter extends Sorter
 {

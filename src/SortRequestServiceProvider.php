@@ -1,10 +1,10 @@
 <?php
 
-namespace Kurozora\SortRequest;
+namespace kiritokatklian\SortRequest;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\ServiceProvider;
-use Kurozora\SortRequest\Console\SorterMakeCommand;
+use kiritokatklian\SortRequest\Console\SorterMakeCommand;
 
 class SortRequestServiceProvider extends ServiceProvider
 {

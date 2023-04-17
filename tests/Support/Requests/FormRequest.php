@@ -1,6 +1,6 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests\Support\Requests;
+namespace kiritokatklian\SortRequest\Tests\Support\Requests;
 
 use Illuminate\Foundation\Http\FormRequest as LaravelFormRequest;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests\Feature;
+namespace kiritokatklian\SortRequest\Tests\Feature;
 
-use Kurozora\SortRequest\Tests\TestCase;
+use kiritokatklian\SortRequest\Tests\TestCase;
 
 class CustomColumnSortingTest extends TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kurozora\SortRequest\Tests\Support\Requests;
+namespace kiritokatklian\SortRequest\Tests\Support\Requests;
 
-use Kurozora\SortRequest\Tests\Support\Sorters\ItemWeightSorter;
-use Kurozora\SortRequest\Traits\SortsViaRequest;
+use kiritokatklian\SortRequest\Tests\Support\Sorters\ItemWeightSorter;
+use kiritokatklian\SortRequest\Traits\SortsViaRequest;
 
 class AdvancedGetItemsRequest extends FormRequest
 {

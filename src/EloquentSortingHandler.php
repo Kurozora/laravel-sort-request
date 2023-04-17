@@ -1,10 +1,10 @@
 <?php
 
-namespace Kurozora\SortRequest;
+namespace kiritokatklian\SortRequest;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
-use Kurozora\SortRequest\Exceptions\EloquentSortingException;
+use kiritokatklian\SortRequest\Exceptions\EloquentSortingException;
 
 class EloquentSortingHandler
 {
